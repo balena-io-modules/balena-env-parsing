@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"outDir": "build",
+		"noUnusedParameters": true,
+		"noUnusedLocals": true,
+		"sourceMap": true,
+		"strict": true,
+		"target": "es2019",
+		"declaration": true,
+		"skipLibCheck": true
+	},
+	"include": [
+		"src/**/*.ts"
+	]
+}
