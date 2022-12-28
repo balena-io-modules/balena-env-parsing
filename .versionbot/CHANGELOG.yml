@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update dependency @types/node to 18.11.18
+      hash: 77a7c1ada7975a276de60d8bc394a31c1093999a
+      body: |
+        Update @types/node to 18.11.18
+
+        Update @types/node from 16.18.11 to 18.11.18
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.1.4
+  title: ""
+  date: 2022-12-28T08:34:46.528Z
+- commits:
     - subject: Update dependency @types/mocha to 10.0.1
       hash: 5a607d212702ab7d11137979c382d3bfbc1f635e
       body: |
