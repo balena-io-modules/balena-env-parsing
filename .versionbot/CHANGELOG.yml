@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update prepare script for husky install
+      hash: cec17710782294f6c88b53f589ed772806fc79c1
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Josh Bowling
+      nested: []
+  version: 1.1.2
+  title: ""
+  date: 2022-12-28T07:35:29.974Z
+- commits:
     - subject: "CI: Use flowzone"
       hash: f194a20e06b52fbe8b0f34359e01f29e97cc49af
       body: ""
