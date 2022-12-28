@@ -1,4 +1,16 @@
 - commits:
+    - subject: Bump dev deps
+      hash: b5b078effdfa599802f25e5ab5e6137d1521c1c8
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Josh Bowling
+      nested: []
+  version: 1.1.5
+  title: ""
+  date: 2022-12-28T10:01:44.555Z
+- commits:
     - subject: Update dependency @types/node to 18.11.18
       hash: 77a7c1ada7975a276de60d8bc394a31c1093999a
       body: |
