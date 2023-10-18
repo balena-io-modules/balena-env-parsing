@@ -66,6 +66,9 @@ export function optionalVar<R>(
  * Checks that a string is a valid int and returns the number if so
  */
 export const checkInt = (s: string): number | undefined => {
+	if (typeof s !== 'string') {
+		throw new Error(`checkInt parameter must be string`);
+	}
 	s = s.trim();
 	if (!/^-?[0-9]+$/.test(s)) {
 		return;
@@ -156,6 +159,9 @@ export const hostPortsVar = (
 	}
 	return hostPairs.split(',').map((hostPair): HostPort => {
 		const [host, maybePort] = hostPair.trim().split(':');
+		if (maybePort == null || host == null) {
+			throw new Error(`Invalid port for '${varName}': ${maybePort}`);
+		}
 		const port = checkInt(maybePort);
 		if (port == null) {
 			throw new Error(`Invalid port for '${varName}': ${maybePort}`);
