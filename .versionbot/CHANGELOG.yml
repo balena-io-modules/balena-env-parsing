@@ -1,4 +1,19 @@
 - commits:
+    - subject: String split and deconstruction may be undefined
+      hash: ab0b99c24f82d1c51d0b802f7d987c746a1fa1f5
+      body: |
+        Adding checkInt typecheck
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: fisehara <harald@balena.io>
+        signed-off-by: fisehara <harald@balena.io>
+      author: fisehara
+      nested: []
+  version: 1.1.6
+  title: ""
+  date: 2023-10-18T08:54:10.064Z
+- commits:
     - subject: Bump dev deps
       hash: b5b078effdfa599802f25e5ab5e6137d1521c1c8
       body: ""
