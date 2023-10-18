@@ -35,7 +35,7 @@ export function optionalVar<R>(
 	varName: string | string[] | string[],
 	defaultValue: R,
 ): string | R;
-export function optionalVar<R>(
+export function optionalVar(
 	varName: string | string[] | string[],
 	defaultValue?: undefined,
 ): string | undefined;
