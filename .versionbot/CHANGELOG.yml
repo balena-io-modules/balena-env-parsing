@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update dependency @types/node to v20
+      hash: a23ea23d92ca6ee0c7dbb7e93883044a3b309979
+      body: |
+        Update @types/node from 18.18.6 to 20.8.7
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Self-hosted Renovate Bot
+      nested: []
+  version: 1.1.8
+  title: ""
+  date: 2023-10-24T01:59:53.757Z
+- commits:
     - subject: Update @balena/lint from 6.2.1 to 7.2.0
       hash: 8b4e120fab92725b743434d3e4899d20d449cb71
       body: ""
