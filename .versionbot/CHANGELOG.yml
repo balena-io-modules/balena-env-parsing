@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update dependency rimraf to v5
+      hash: 2549b71d43287a299b0adfa75dc79b9e53331890
+      body: |
+        Update rimraf from 3.0.2 to 5.0.5
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Self-hosted Renovate Bot
+      nested: []
+  version: 1.1.10
+  title: ""
+  date: 2023-12-29T12:52:54.693Z
+- commits:
     - subject: Update dependency typescript to v5
       hash: 3f31c879075cb52ee522f1c6ee2725f46924da47
       body: |
