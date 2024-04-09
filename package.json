@@ -29,6 +29,7 @@
     "@types/node": "^20.0.0",
     "chai": "^4.3.7",
     "husky": "^9.0.0",
+    "lint-staged": "^15.2.2",
     "mocha": "^10.2.0",
     "rimraf": "^5.0.0",
     "ts-node": "^10.9.1",
@@ -39,11 +40,6 @@
     "recursive": true,
     "require": "ts-node/register/transpile-only",
     "extension": ".ts"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.ts": [
