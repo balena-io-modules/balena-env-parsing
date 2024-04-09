@@ -2,13 +2,13 @@ import { expect } from 'chai';
 import {
 	boolVar,
 	checkInt,
-	HostPort,
 	intVar,
 	optionalVar,
 	requiredVar,
 	hostPortsVar,
 	trustProxyVar,
 } from '../src';
+import type { HostPort } from '../src';
 
 const varName = 'fruit';
 const varNames = ['vegetable', 'fruit'];
