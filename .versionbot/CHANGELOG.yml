@@ -1,4 +1,33 @@
 - commits:
+    - subject: Add lint-staged and pre-commit script
+      hash: 3937c571923d66e605c2938f42871d32c03b26f7
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Josh Bowling
+      nested: []
+    - subject: Update prepare script for husky v9
+      hash: 6c28e43fed06642e87ca2a93bf636ff48e850829
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Josh Bowling
+      nested: []
+    - subject: Update dependency husky to v9
+      hash: 0dfa86ee5e1dcb67cd6d2e2e9085d00c759599b3
+      body: |
+        Update husky from 8.0.3 to 9.0.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Self-hosted Renovate Bot
+      nested: []
+  version: 1.1.12
+  title: ""
+  date: 2024-04-09T02:21:56.121Z
+- commits:
     - subject: Update type import
       hash: 048e9954236aed01865141c3860e79a0400798d7
       body: ""
