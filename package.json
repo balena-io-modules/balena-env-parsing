@@ -11,7 +11,7 @@
     "lint-fix": "balena-lint --typescript --fix src test",
     "test": "mocha && tsc --noEmit && tsc --noEmit --project ./tsconfig.dev.json && npm run lint",
     "prepack": "npm run build",
-    "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\""
+    "prepare": "node -e \"try { (await import('husky')).default() } catch (e) { if (e.code !== 'ERR_MODULE_NOT_FOUND') throw e }\" --input-type module"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,8 @@
     "@types/mocha": "^10.0.0",
     "@types/node": "^20.0.0",
     "chai": "^4.3.7",
-    "husky": "^8.0.2",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.2.2",
     "mocha": "^10.2.0",
     "rimraf": "^5.0.0",
     "ts-node": "^10.9.1",
@@ -39,11 +40,6 @@
     "recursive": true,
     "require": "ts-node/register/transpile-only",
     "extension": ".ts"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.ts": [
