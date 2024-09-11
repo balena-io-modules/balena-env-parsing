@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/balena-io-modules/balena-env-parsing",
   "devDependencies": {
-    "@balena/lint": "^8.0.0",
+    "@balena/lint": "^8.2.8",
     "@types/chai": "^4.3.3",
     "@types/mocha": "^10.0.0",
     "@types/node": "^20.0.0",
