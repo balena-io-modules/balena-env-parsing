@@ -7,6 +7,7 @@ import {
 	requiredVar,
 	hostPortsVar,
 	trustProxyVar,
+	arrayVar,
 } from '../src';
 import type { HostPort } from '../src';
 
@@ -115,6 +116,40 @@ for (const [testType, varTest] of varTests) {
 				setVar(`${value}`);
 				expect(boolVar(varTest)).to.equal(value);
 				expect(boolVar(varTest, defaultValue)).to.equal(value);
+			});
+		});
+
+		describe('arrayVar', () => {
+			if (typeof varTest !== 'string') {
+				return;
+			}
+			it('should return undefined array when the env var is missing', () => {
+				expect(arrayVar(varTest)).to.be.undefined;
+			});
+			it('should return an array of one item when there is no delimiter in the string', () => {
+				setVar('value1');
+				expect(arrayVar(varTest)).to.deep.equal(['value1']);
+			});
+			it('should return an array of two items when the default delimiter is part of the string', () => {
+				setVar('value1,value2,value3');
+				expect(arrayVar(varTest)).to.deep.equal(['value1', 'value2', 'value3']);
+			});
+			it('should include leading & trailing whitespaces in the array values', () => {
+				setVar(', value1 , value2 ');
+				expect(arrayVar(varTest)).to.deep.equal(['', ' value1 ', ' value2 ']);
+			});
+			it('should return an array of two items when the provided delimiter is part of the string', () => {
+				setVar('val,ue1;val,ue2;val,ue3');
+				expect(arrayVar(varTest, { delimiter: ';' })).to.deep.equal([
+					'val,ue1',
+					'val,ue2',
+					'val,ue3',
+				]);
+			});
+			it('should throw when the array includes items that are not part of the allowed values', () => {
+				setVar('value1,value2,value3');
+				expect(() => arrayVar(varTest, { allowedValues: ['value1', 'value2'] }))
+					.to.throw;
 			});
 		});
 

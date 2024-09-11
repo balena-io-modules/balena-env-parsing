@@ -141,6 +141,36 @@ export function boolVar<R>(
 	);
 }
 
+/**
+ * Splits an env var using the provided delimiter (defaults to ',') into an array of individual string values.
+ * Optionally accepts an array of allowed values for the array.
+ */
+export const arrayVar = <S extends string>(
+	name: string,
+	{
+		delimiter = ',',
+		allowedValues,
+	}: {
+		delimiter?: string | RegExp;
+		allowedValues?: S[];
+	} = {},
+): S[] | undefined => {
+	const rawValue = optionalVar(name);
+	if (rawValue == null) {
+		return rawValue;
+	}
+	const items = rawValue.split(delimiter);
+
+	const allowedValueSet =
+		allowedValues != null ? new Set<string>(allowedValues) : null;
+	if (allowedValueSet != null && items.some((v) => !allowedValueSet.has(v))) {
+		throw new Error(
+			`'${name}' must be a '${delimiter.toString()}' delimited string with one or more of the allowed values: ${[...allowedValueSet].toString()}`,
+		);
+	}
+	return items as S[];
+};
+
 export type HostPort = { host: string; port: number };
 /**
  * Splits an env var in the format of `${host1}:${port1}, ${host2}:${port2}, ...`
