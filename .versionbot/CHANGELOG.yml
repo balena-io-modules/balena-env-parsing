@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add the arrayVar helper
+      hash: 0de419ef04855ae2aeb5ed4fa66f81f4dafcc6e0
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Thodoris Greasidis
+      nested: []
+  version: 1.2.0
+  title: ""
+  date: 2024-09-12T16:02:27.541Z
+- commits:
     - subject: Add lint-staged and pre-commit script
       hash: 3937c571923d66e605c2938f42871d32c03b26f7
       body: ""
