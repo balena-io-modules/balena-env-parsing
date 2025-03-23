@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update chai to v5
+      hash: 95cbe80336511b883393a1efcc8d6bf3f2665bbe
+      body: |
+        Update @types/chai from 4.3.20 to 5.2.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 1.2.2
+  title: ""
+  date: 2025-03-23T22:42:47.925Z
+- commits:
     - subject: Update dependency rimraf to v6
       hash: f90bcb01bc0837e21c32018735b59be670fd13dd
       body: |
