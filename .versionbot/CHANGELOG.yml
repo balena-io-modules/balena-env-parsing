@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update dependency rimraf to v6
+      hash: f90bcb01bc0837e21c32018735b59be670fd13dd
+      body: |
+        Update rimraf from 5.0.10 to 6.0.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 1.2.1
+  title: ""
+  date: 2025-03-23T07:52:08.496Z
+- commits:
     - subject: Add the arrayVar helper
       hash: 0de419ef04855ae2aeb5ed4fa66f81f4dafcc6e0
       body: ""
