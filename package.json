@@ -7,8 +7,8 @@
   "scripts": {
     "clean": "rimraf build",
     "build": "npm run clean && tsc",
-    "lint": "balena-lint --typescript src test",
-    "lint-fix": "balena-lint --typescript --fix src test",
+    "lint": "balena-lint -t tsconfig.dev.json src test",
+    "lint-fix": "balena-lint -t tsconfig.dev.json --fix src test",
     "test": "mocha && tsc --noEmit && tsc --noEmit --project ./tsconfig.dev.json && npm run lint",
     "prepack": "npm run build",
     "prepare": "node -e \"try { (await import('husky')).default() } catch (e) { if (e.code !== 'ERR_MODULE_NOT_FOUND') throw e }\" --input-type module"
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/balena-io-modules/balena-env-parsing",
   "devDependencies": {
-    "@balena/lint": "^8.0.0",
+    "@balena/lint": "^9.1.4",
     "@types/chai": "^5.0.0",
     "@types/mocha": "^10.0.0",
     "@types/node": "^20.0.0",
