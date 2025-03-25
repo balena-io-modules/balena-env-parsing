@@ -32,15 +32,15 @@ export const requiredVar = (varName: string | string[]): string => {
  * this means that if no default is specified then `''` will be normalized to `undefined`
  */
 export function optionalVar<R>(
-	varName: string | string[] | string[],
+	varName: string | string[],
 	defaultValue: R,
 ): string | R;
 export function optionalVar(
-	varName: string | string[] | string[],
+	varName: string | string[],
 	defaultValue?: undefined,
 ): string | undefined;
 export function optionalVar<R>(
-	varName: string | string[] | string[],
+	varName: string | string[],
 	defaultValue?: R,
 ): string | R | undefined {
 	// If there's a single string var name then fetch it directly from process.env, returning the default as necessary
