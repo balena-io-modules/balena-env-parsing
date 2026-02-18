@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update dependency @types/node to v24
+      hash: b172e972241f5768dfb30ec3d550b16222dfd082
+      body: |
+        Update @types/node from 20.19.23 to 24.9.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 1.2.7
+  title: ""
+  date: 2026-02-18T08:28:02.494Z
+- commits:
     - subject: Update dependency chai to v6
       hash: 33f81c8a3632cc34e6055fac753fc9436e41a28e
       body: |
