@@ -1,6 +1,6 @@
 {
   "name": "@balena/env-parsing",
-  "version": "1.2.9",
+  "version": "1.2.10",
   "description": "A collection of utilities to simplify/standardize env var parsing",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -47,6 +47,6 @@
     ]
   },
   "versionist": {
-    "publishedAt": "2026-03-24T18:09:18.267Z"
+    "publishedAt": "2026-03-25T20:03:39.122Z"
   }
 }
