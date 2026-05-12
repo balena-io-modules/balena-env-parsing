@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update dependency lint-staged to v17
+      hash: cbd584b8eff8bc3626ff0a612c204f879348cf8f
+      body: |
+        Update lint-staged from 16.4.0 to 17.0.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 1.2.25
+  title: ""
+  date: 2026-05-12T02:47:09.615Z
+- commits:
     - subject: Revert flowzone pinning to master
       hash: 11391bc35a71479e4348b1e238b55614631a3821
       body: ""
