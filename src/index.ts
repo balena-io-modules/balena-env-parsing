@@ -149,31 +149,27 @@ export function enumVar<T extends string>(
 	varName: string | string[],
 	validValues: readonly T[],
 ): T;
-export function enumVar<T extends string, R>(
+export function enumVar<T extends string>(
 	varName: string | string[],
 	validValues: readonly T[],
-	defaultValue: R,
-): T | R;
-export function enumVar<T extends string, R>(
+	defaultValue: T,
+): T;
+export function enumVar<T extends string>(
 	varName: string | string[],
 	validValues: readonly T[],
-	defaultValue?: R,
-): T | R {
-	if (arguments.length === 2) {
-		requiredVar(varName);
-	}
+	defaultValue?: T,
+): T {
+	const s =
+		arguments.length === 2
+			? requiredVar(varName)
+			: optionalVar(varName, defaultValue);
 
-	const s = optionalVar(varName);
-	if (s == null) {
-		return defaultValue!;
-	}
-	const match = validValues.find((v) => v === s);
-	if (match == null) {
+	if (!validValues.includes(s as T)) {
 		throw new Error(
 			`Invalid value for '${varName}', got '${s}', expected one of: ${validValues.join(', ')}`,
 		);
 	}
-	return match;
+	return s as T;
 }
 
 /**
