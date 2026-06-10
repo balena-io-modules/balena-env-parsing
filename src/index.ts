@@ -142,6 +142,41 @@ export function boolVar<R>(
 }
 
 /**
+ * Fetches the contents of an env var, ensuring it is one of the valid values if set,
+ * if it is not set then instead it returns the specified default value
+ */
+export function enumVar<T extends string>(
+	varName: string | string[],
+	validValues: readonly T[],
+): T;
+export function enumVar<T extends string, R>(
+	varName: string | string[],
+	validValues: readonly T[],
+	defaultValue: R,
+): T | R;
+export function enumVar<T extends string, R>(
+	varName: string | string[],
+	validValues: readonly T[],
+	defaultValue?: R,
+): T | R {
+	if (arguments.length === 2) {
+		requiredVar(varName);
+	}
+
+	const s = optionalVar(varName);
+	if (s == null) {
+		return defaultValue!;
+	}
+	const match = validValues.find((v) => v === s);
+	if (match == null) {
+		throw new Error(
+			`Invalid value for '${varName}', got '${s}', expected one of: ${validValues.join(', ')}`,
+		);
+	}
+	return match;
+}
+
+/**
  * Splits an env var using the provided delimiter (defaults to ',') into an array of individual string values.
  * Optionally accepts an array of allowed values for the array.
  */

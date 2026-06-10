@@ -1,6 +1,7 @@
 import { expect } from 'chai';
 import {
 	boolVar,
+	enumVar,
 	checkInt,
 	intVar,
 	optionalVar,
@@ -116,6 +117,35 @@ for (const [testType, varTest] of varTests) {
 				setVar(`${value}`);
 				expect(boolVar(varTest)).to.equal(value);
 				expect(boolVar(varTest, defaultValue)).to.equal(value);
+			});
+		});
+
+		describe('enumVar', () => {
+			const validValues = ['apple', 'banana'] as const;
+			const defaultValue = 'banana';
+			it('should throw when the env var is missing', () => {
+				expect(() => enumVar(varTest, validValues)).to.throw;
+			});
+			it('should throw when the env var is invalid', () => {
+				setVar('date');
+				expect(() => enumVar(varTest, validValues)).to.throw;
+			});
+			it('should return the default value when the env var is missing', () => {
+				expect(enumVar(varTest, validValues, defaultValue)).to.equal(
+					defaultValue,
+				);
+			});
+			it('should return the default value when the env var is empty', () => {
+				setVar('');
+				expect(enumVar(varTest, validValues, defaultValue)).to.equal(
+					defaultValue,
+				);
+			});
+			it('should return the value when the env var is a valid value', () => {
+				const value = 'apple';
+				setVar(value);
+				expect(enumVar(varTest, validValues)).to.equal(value);
+				expect(enumVar(varTest, validValues, defaultValue)).to.equal(value);
 			});
 		});
 

@@ -43,7 +43,7 @@
   },
   "lint-staged": {
     "*.ts": [
-      "balena-lint --fix"
+      "balena-lint -t tsconfig.dev.json --fix"
     ]
   },
   "versionist": {
