@@ -1,6 +1,7 @@
 {
 	"compilerOptions": {
 		"module": "commonjs",
+		"rootDir": "./src",
 		"outDir": "build",
 		"noUnusedParameters": true,
 		"noUnusedLocals": true,
@@ -8,7 +9,8 @@
 		"strict": true,
 		"target": "es2019",
 		"declaration": true,
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"types": ["node"]
 	},
 	"include": [
 		"src/**/*.ts"
