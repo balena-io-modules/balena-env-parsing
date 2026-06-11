@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update typescript to v6
+      hash: c4d2f7cb54d7eca58a2c4780df5b91726eddb301
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: joshbwlng
+      nested: []
+  version: 1.3.2
+  title: ""
+  date: 2026-06-11T05:41:03.831Z
+- commits:
     - subject: Improve `enumVar` handling
       hash: 176941315517f44ba6f4515b7e9b78d956c88620
       body: |
