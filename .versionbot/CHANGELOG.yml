@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update dependency @types/node to v24.13.3
+      hash: a09d7330fc6cc18fdfa58eb889017923cfc54e90
+      body: |
+        Update @types/node from 24.13.2 to 24.13.3
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 1.3.5
+  title: ""
+  date: 2026-07-11T07:29:04.866Z
+- commits:
     - subject: Update dependency lint-staged to v17.0.8
       hash: 5431b323499aa0d3465a19685e643c0081c0e55c
       body: |
