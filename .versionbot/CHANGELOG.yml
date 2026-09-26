@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update dependency @types/node to v24.13.6
+      hash: 2185485f7d68e7cfed8064129a0b8dc51dfcf673
+      body: |
+        Update @types/node from 24.13.5 to 24.13.6
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 1.3.19
+  title: ""
+  date: 2026-09-26T01:18:17.995Z
+- commits:
     - subject: Update dependency mocha to v12.0.2
       hash: b37834848126209277d4978b0c3f32df0be079f4
       body: |
