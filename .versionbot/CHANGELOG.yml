@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update dependency rimraf to v6.1.4
+      hash: bae81ffa0c185fd1873d93875e6d43f9db40e4d2
+      body: |
+        Update rimraf from 6.1.3 to 6.1.4
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 1.3.27
+  title: ""
+  date: 2026-11-07T00:59:54.740Z
+- commits:
     - subject: Update dependency @balena/lint to v11
       hash: dd6143fbf675144d261e0af3c1aaa89245fcfd56
       body: |
