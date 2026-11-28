@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update dependency @types/node to v24.19.4
+      hash: a86251dc53bbe335a1faba30549877a52dc9878d
+      body: |
+        Update @types/node from 24.19.3 to 24.19.4
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 1.3.31
+  title: ""
+  date: 2026-11-28T11:54:12.471Z
+- commits:
     - subject: Update dependency @types/node to v24.19.3
       hash: c4a543572e468c04108e7d4641956c79f4d71f2c
       body: |
